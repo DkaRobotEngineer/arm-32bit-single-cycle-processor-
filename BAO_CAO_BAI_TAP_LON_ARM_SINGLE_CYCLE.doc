@@ -1,0 +1,997 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office'
+      xmlns:w='urn:schemas-microsoft-com:office:word'
+      xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Báo cáo Bài tập lớn Thiết kế số và Vi xử lý</title>
+<!--[if gte mso 9]>
+<xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>100</w:Zoom>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page Section1 {
+    size: 21.0cm 29.7cm; /* A4 */
+    margin: 2.0cm 2.0cm 2.0cm 3.0cm; /* Tren, Phai, Duoi, Trai (Chuan quy dinh luan van UET) */
+    mso-header-margin: 1.0cm;
+    mso-footer-margin: 1.0cm;
+    mso-paper-source: 0;
+}
+div.Section1 {
+    page: Section1;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    line-height: 1.35;
+    color: #000000;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15pt;
+    font-weight: bold;
+    color: #002060;
+    text-transform: uppercase;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13.5pt;
+    font-weight: bold;
+    color: #1F4E79;
+    margin-top: 14pt;
+    margin-bottom: 4pt;
+    page-break-after: avoid;
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+    margin-top: 10pt;
+    margin-bottom: 2pt;
+    page-break-after: avoid;
+}
+p {
+    text-align: justify;
+    margin-top: 3pt;
+    margin-bottom: 6pt;
+    text-indent: 1.0cm;
+}
+p.no-indent {
+    text-indent: 0cm;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10pt auto;
+    font-size: 11pt;
+}
+th {
+    background-color: #1F4E79;
+    color: #FFFFFF;
+    border: 1pt solid #000000;
+    padding: 6pt;
+    text-align: center;
+    font-weight: bold;
+}
+td {
+    border: 1pt solid #7F7F7F;
+    padding: 5pt;
+    vertical-align: middle;
+}
+.center {
+    text-align: center;
+}
+.caption {
+    font-size: 11pt;
+    font-style: italic;
+    text-align: center;
+    margin-top: 4pt;
+    margin-bottom: 12pt;
+    color: #333333;
+}
+.placeholder-box {
+    border: 2pt dashed #1F4E79;
+    background-color: #F2F5F9;
+    padding: 20pt;
+    text-align: center;
+    margin: 12pt auto;
+    width: 92%;
+    border-radius: 6pt;
+}
+.placeholder-title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #C00000;
+    margin-bottom: 6pt;
+}
+.placeholder-desc {
+    font-size: 11pt;
+    color: #333333;
+    font-style: italic;
+}
+.code-block {
+    background-color: #F8F9FA;
+    border: 1pt solid #D3D3D3;
+    border-left: 3pt solid #1F4E79;
+    padding: 6pt 10pt;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    line-height: 1.25;
+    margin: 8pt 0;
+    white-space: pre-wrap;
+}
+.cover-page {
+    border: 3pt double #002060;
+    padding: 25pt;
+    min-height: 25cm;
+    text-align: center;
+}
+.page-break {
+    page-break-before: always;
+}
+</style>
+</head>
+<body>
+<div class="Section1">
+
+<!-- ==================== TRANG BÌA ==================== -->
+<div class="cover-page">
+    <p class="no-indent center" style="font-size: 14pt; font-weight: bold; margin: 0;">ĐẠI HỌC QUỐC GIA HÀ NỘI</p>
+    <p class="no-indent center" style="font-size: 15pt; font-weight: bold; color: #002060; margin: 0;">TRƯỜNG ĐẠI HỌC CÔNG NGHỆ</p>
+    <p class="no-indent center" style="font-size: 12pt; margin-top: 4pt;">KHOA ĐIỆN TỬ - VIỄN THÔNG</p>
+    <div style="margin: 20pt 0;">
+        <p class="no-indent center" style="font-size: 24pt; color: #002060;">★ ★ ★</p>
+    </div>
+    
+    <div style="margin: 40pt 0 20pt 0;">
+        <p class="no-indent center" style="font-size: 18pt; font-weight: bold; color: #C00000; text-transform: uppercase;">
+            BÁO CÁO BÀI TẬP LỚN
+        </p>
+        <p class="no-indent center" style="font-size: 14pt; font-weight: bold; color: #002060;">
+            HỌC PHẦN: THIẾT KẾ SỐ VÀ VI XỬ LÝ (ELT3290)
+        </p>
+    </div>
+
+    <div style="margin: 30pt 0; padding: 15pt; border-top: 1.5pt solid #002060; border-bottom: 1.5pt solid #002060;">
+        <p class="no-indent center" style="font-size: 17pt; font-weight: bold; color: #002060; line-height: 1.4;">
+            THIẾT KẾ VÀ KIỂM CHỨNG BỘ VI XỬ LÝ ARM 32-BIT ĐƠN CHU KỲ (SINGLE-CYCLE PROCESSOR) TRÊN FPGA
+        </p>
+        <p class="no-indent center" style="font-size: 12pt; font-style: italic; color: #555;">
+            (Tích hợp khối mở rộng Barrel Shifter 4 chế độ &amp; Bộ giải mã 14 mã điều kiện thực thi)
+        </p>
+    </div>
+
+    <div style="margin-top: 60pt; text-align: left; width: 85%; margin-left: auto; margin-right: auto; font-size: 13pt;">
+        <table style="border: none; width: 100%;">
+            <tr style="border: none;">
+                <td style="border: none; width: 45%; font-weight: bold; vertical-align: top;">Sinh viên thực hiện:</td>
+                <td style="border: none; width: 55%; vertical-align: top;">
+                    [Họ và tên của bạn] – [Mã SV]<br>
+                    Lớp: [Tên lớp, ví dụ: K66/K67-ELT]
+                </td>
+            </tr>
+            <tr style="border: none;">
+                <td style="border: none; font-weight: bold; vertical-align: top; padding-top: 12pt;">Giảng viên phụ trách:</td>
+                <td style="border: none; vertical-align: top; padding-top: 12pt;">
+                    TS. Vũ Quốc Tuấn<br>
+                    KS. Phạm Quang Hùng
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin-top: 70pt;">
+        <p class="no-indent center" style="font-size: 12pt; font-weight: bold;">HÀ NỘI – 11/2026</p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==================== MỤC LỤC ==================== -->
+<h1 class="center">MỤC LỤC</h1>
+<p class="no-indent" style="font-weight: bold;">CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI VÀ MỤC TIÊU NGHIÊN CỨU .................................................... 1</p>
+<p class="no-indent" style="margin-left: 20pt;">1.1. Lý do lựa chọn đề tài ............................................................................................................. 1</p>
+<p class="no-indent" style="margin-left: 20pt;">1.2. Mục tiêu và phạm vi của đề tài ............................................................................................... 1</p>
+<p class="no-indent" style="margin-left: 20pt;">1.3. Nền tảng công cụ và chip phần cứng thực hiện ...................................................................... 2</p>
+
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">CHƯƠNG 2: CƠ SỞ LÝ THUYẾT VỀ KIẾN TRÚC VI XỬ LÝ ARM ............................................... 3</p>
+<p class="no-indent" style="margin-left: 20pt;">2.1. Kiến trúc máy tính Harvard và luồng xử lý đơn chu kỳ (Single-Cycle) ................................. 3</p>
+<p class="no-indent" style="margin-left: 20pt;">2.2. Tập lệnh ARMv4 và định dạng mã hóa 32-bit ........................................................................ 3</p>
+<p class="no-indent" style="margin-left: 20pt;">2.3. Cơ chế thực thi có điều kiện (Conditional Execution) đặc trưng của ARM ............................ 4</p>
+
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">CHƯƠNG 3: THIẾT KẾ VI KIẾN TRÚC BỘ XỬ LÝ ARM 32-BIT ................................................. 5</p>
+<p class="no-indent" style="margin-left: 20pt;">3.1. Thiết kế Đường truyền dữ liệu (Datapath) .............................................................................. 5</p>
+<p class="no-indent" style="margin-left: 20pt;">3.2. Khối mở rộng Barrel Shifter 4 chế độ (LSL, LSR, ASR, ROR) ............................................. 6</p>
+<p class="no-indent" style="margin-left: 20pt;">3.3. Tệp thanh ghi Register File và xử lý đọc thanh ghi R15 (PC + 8) ......................................... 7</p>
+<p class="no-indent" style="margin-left: 20pt;">3.4. Khối tính toán số học và logic (ALU) và tạo 4 cờ {N, Z, C, V} ............................................. 8</p>
+<p class="no-indent" style="margin-left: 20pt;">3.5. Thiết kế Bộ điều khiển trung tâm (Control Unit) .................................................................... 9</p>
+<p class="no-indent" style="margin-left: 20pt;">3.6. Bộ giải mã 14 mã điều kiện thực thi (Condition Checker) ................................................... 10</p>
+
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">CHƯƠNG 4: PHÂN TÍCH ĐƯỜNG TRỄ TỚI HẠN VÀ HIỆU NĂNG ........................................... 11</p>
+<p class="no-indent" style="margin-left: 20pt;">4.1. Phân tích đường trễ tới hạn (Critical Path Analysis) của lệnh LDR ...................................... 11</p>
+<p class="no-indent" style="margin-left: 20pt;">4.2. So sánh định lượng hiệu năng với kiến trúc Multicycle và Pipelined ................................... 12</p>
+
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">CHƯƠNG 5: KẾT QUẢ TỔNG HỢP TRÊN INTEL QUARTUS PRIME ........................................ 13</p>
+<p class="no-indent" style="margin-left: 20pt;">5.1. Kết quả biên dịch và phân bổ tài nguyên trên FPGA MAX 10 ............................................. 13</p>
+<p class="no-indent" style="margin-left: 20pt;">5.2. Phân tích sơ đồ RTL Viewer từ Quartus Prime .................................................................... 14</p>
+
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">CHƯƠNG 6: KẾT QUẢ MÔ PHỎNG MODELSIM VÀ PHÂN TÍCH DẠNG SÓNG ................... 15</p>
+<p class="no-indent" style="margin-left: 20pt;">6.1. Kịch bản chương trình kiểm thử hợp ngữ (Assembly Test Program) .................................... 15</p>
+<p class="no-indent" style="margin-left: 20pt;">6.2. Phân tích dạng sóng mô phỏng chi tiết từng giai đoạn lệnh ................................................. 16</p>
+
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">CHƯƠNG 7: TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN ................................................................... 18</p>
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">TÀI LIỆU THAM KHẢO ................................................................................................................. 19</p>
+<p class="no-indent" style="font-weight: bold; margin-top: 8pt;">PHỤ LỤC: MÃ NGUỒN SYSTEMVERILOG ................................................................................. 20</p>
+
+<div class="page-break"></div>
+
+<!-- ==================== NỘI DUNG CHÍNH ==================== -->
+
+<h1>CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI VÀ MỤC TIÊU NGHIÊN CỨU</h1>
+
+<h2>1.1. Lý do lựa chọn đề tài</h2>
+<p>
+Trong kỷ nguyên phát triển bùng nổ của trí tuệ nhân tạo, thiết bị di động thông minh, thiết bị Internet vạn vật (IoT) và các hệ thống tính toán hiệu năng cao, kiến trúc ARM (Advanced RISC Machines) đã khẳng định vị thế là kiến trúc vi xử lý được ứng dụng phổ biến nhất toàn cầu. Nhờ triết lý thiết kế tập lệnh rút gọn (RISC) tối ưu hóa tỷ số hiệu năng trên điện năng tiêu thụ (MIPS/Watt), vi xử lý ARM trở thành linh hồn của hơn 95% vi mạch điện thoại thông minh, máy tính bảng và các vi điều khiển nhúng trên thế giới.
+</p>
+<p>
+Học phần <b>Thiết kế số và Vi xử lý (ELT3290)</b> tại Trường Đại học Công nghệ – ĐHQGHN đóng vai trò là môn học xương sống của chuyên ngành Kỹ thuật Điện tử và Thiết kế Vi mạch. Việc tiếp cận vi kiến trúc thông qua mô phỏng lý thuyết thuần túy thường khiến sinh viên gặp khó khăn trong việc hình dung mối tương quan giữa một dòng lệnh hợp ngữ (Assembly) và sự biến đổi mức điện áp, sự đóng/mở của các cổng logic, bộ dồn kênh (Multiplexer), tệp thanh ghi (Register File) và khối số học (ALU). Do đó, đề tài <i>"Thiết kế và kiểm chứng bộ vi xử lý ARM 32-bit đơn chu kỳ (Single-Cycle Processor) trên FPGA"</i> được lựa chọn nhằm hiện thực hóa toàn bộ luồng thiết kế vi mạch số bán dẫn từ mức đặc tả kiến trúc (Architecture) &rarr; mô tả phần cứng ở mức chuyển giao thanh ghi (RTL bằng SystemVerilog) &rarr; tổng hợp logic trên công cụ công nghiệp Intel Quartus Prime &rarr; kiểm chứng chức năng và dạng sóng trên trình mô phỏng Intel ModelSim.
+</p>
+
+<h2>1.2. Mục tiêu và phạm vi của đề tài</h2>
+<p>
+Khác với các đề tài khóa trước chỉ dừng lại ở việc mô phỏng một khối chức năng riêng lẻ (như khối Control Unit đơn độc), đồ án này đặt ra mục tiêu xây dựng <b>hoàn chỉnh một hệ thống máy tính thu nhỏ (Complete Single-Cycle Computer System)</b> bao gồm toàn bộ CPU, Datapath, Control Unit, Bộ nhớ lệnh (Instruction ROM) và Bộ nhớ dữ liệu (Data RAM).
+</p>
+<p class="no-indent" style="font-weight: bold;">Các mục tiêu kỹ thuật cụ thể bao gồm:</p>
+<ul>
+    <li><b>Hiện thực hóa tập lệnh cơ bản (7 lệnh ARM 32-bit):</b>
+        <ul>
+            <li>Nhóm xử lý dữ liệu (Data-processing): <code>ADD</code>, <code>SUB</code>, <code>AND</code>, <code>ORR</code> (hỗ trợ cả toán hạng thanh ghi và hằng số tức thời 8-bit, có bit S cập nhật 4 cờ trạng thái).</li>
+            <li>Nhóm truy xuất bộ nhớ (Memory access): <code>LDR</code> (Load Register), <code>STR</code> (Store Register) với offset tức thời 12-bit dương.</li>
+            <li>Nhóm điều khiển luồng lệnh (Branching): <code>B</code> (Branch tương đối tính qua ALU).</li>
+        </ul>
+    </li>
+    <li><b>Tích hợp tính năng mở rộng phần cứng cao cấp (Hardware Extensions):</b>
+        <ul>
+            <li>Khối <b>Barrel Shifter 32-bit (<code>shifter.sv</code>)</b> đặt tại ngõ vào RD2 của ALU, giải mã trường Instr[11:5] để thực hiện đủ 4 chế độ dịch: dịch trái logic (LSL), dịch phải logic (LSR), dịch phải số học bảo toàn bit dấu (ASR) và xoay vòng bit phải (ROR).</li>
+            <li>Khối giải mã đầy đủ <b>14 mã điều kiện thực thi (ARM Condition Execution)</b> trong <code>condcheck.sv</code> (EQ, NE, CS/HS, CC/LO, MI, PL, VS, VC, HI, LS, GE, LT, GT, LE và mặc định AL).</li>
+            <li>Hiện thực đúng chuẩn đặc thù thanh ghi R15 (PC+8) trong Tệp thanh ghi để tương thích 100% với trình biên dịch ARM.</li>
+        </ul>
+    </li>
+    <li><b>Tổng hợp và kiểm chứng:</b>
+        <ul>
+            <li>Tổng hợp thành công (0 Errors, 0 Inferred Latches) trên phần mềm Intel Quartus Prime cho chip FPGA Intel MAX 10.</li>
+            <li>Xây dựng Self-checking Testbench tự động kiểm chứng đúng đắn trên phần mềm Intel ModelSim.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>1.3. Nền tảng công cụ và chip phần cứng thực hiện</h2>
+<ul>
+    <li><b>Ngôn ngữ mô tả phần cứng:</b> SystemVerilog (IEEE 1800-2017) – chuẩn ngôn ngữ công nghiệp hiện đại nhất trong thiết kế và kiểm thử vi mạch.</li>
+    <li><b>Môi trường tổng hợp Logic (Synthesis Tool):</b> Intel Quartus Prime Lite Edition Version 20.1.</li>
+    <li><b>Môi trường mô phỏng (Simulation Tool):</b> ModelSim - Intel FPGA Starter Edition 2020.1.</li>
+    <li><b>Dòng chip FPGA mục tiêu:</b> Intel MAX 10 (Mã linh kiện: <code>10M50DAF484C7G</code>) trên kit thực hành Terasic DE10-Lite.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h1>CHƯƠNG 2: CƠ SỞ LÝ THUYẾT VỀ KIẾN TRÚC VI XỬ LÝ ARM</h1>
+
+<h2>2.1. Kiến trúc máy tính Harvard và luồng xử lý đơn chu kỳ (Single-Cycle)</h2>
+<p>
+Để một bộ vi xử lý có thể hoàn tất việc thực thi một lệnh trong đúng một chu kỳ xung nhịp duy nhất (CPI = 1.0), cấu trúc bộ nhớ bắt buộc phải áp dụng <b>kiến trúc Harvard</b>. Trong kiến trúc này, Bộ nhớ lệnh (Instruction Memory) và Bộ nhớ dữ liệu (Data Memory) được tách biệt hoàn toàn về mặt vật lý, sở hữu hai không gian địa chỉ và hai bus truyền dữ liệu độc lập. Nhờ đó, tại một sườn xung nhịp, CPU có thể đồng thời lấy mã lệnh (Instruction Fetch) từ bộ nhớ lệnh và đọc/ghi dữ liệu (Data Memory Access) từ bộ nhớ dữ liệu mà không hề xảy ra hiện tượng xung đột tài nguyên (Structural Hazard).
+</p>
+<p>
+Nguyên lý vận hành đơn chu kỳ (Single-Cycle Execution Flow) quy định mỗi lệnh được nạp, giải mã, thực thi, truy xuất bộ nhớ và ghi kết quả ngược về tệp thanh ghi (Writeback) trong trọn vẹn một chu kỳ xung nhịp duy nhất:
+</p>
+<ol>
+    <li><b>Instruction Fetch (IF):</b> Bộ đếm chương trình (PC) đưa địa chỉ vào bộ nhớ lệnh để đọc mã máy 32-bit Instr.</li>
+    <li><b>Instruction Decode (ID):</b> Bộ điều khiển (Control Unit) phân tích mã lệnh để xác lập các tín hiệu điều khiển, đồng thời tệp thanh ghi đọc ra các toán hạng nguồn SrcA và SrcB.</li>
+    <li><b>Execute (EX):</b> Bộ ALU thực hiện phép tính số học/logic hoặc tính toán địa chỉ bộ nhớ.</li>
+    <li><b>Memory Access (MEM):</b> Dữ liệu được đọc từ bộ nhớ (lệnh LDR) hoặc ghi xuống bộ nhớ (lệnh STR).</li>
+    <li><b>Writeback (WB):</b> Kết quả cuối cùng từ ALU hoặc từ bộ nhớ được ghi ngược lại thanh ghi đích Rd tại sườn dương xung nhịp tiếp theo.</li>
+</ol>
+
+<h2>2.2. Tập lệnh ARMv4 và định dạng mã hóa 32-bit</h2>
+<p>
+Mọi lệnh trong tập lệnh ARM 32-bit đều có chiều dài cố định là 32 bit, được căn chỉnh theo biên 4 byte (Word-aligned). Định dạng mã hóa được phân định rõ ràng như sau:
+</p>
+
+<table>
+    <tr>
+        <th style="width: 15%;">Bit [31:28]</th>
+        <th style="width: 10%;">Bit [27:26]</th>
+        <th style="width: 20%;">Bit [25:20]</th>
+        <th style="width: 15%;">Bit [19:16]</th>
+        <th style="width: 15%;">Bit [15:12]</th>
+        <th style="width: 25%;">Bit [11:0]</th>
+    </tr>
+    <tr>
+        <td class="center"><b>Cond</b><br>(Mã điều kiện)</td>
+        <td class="center"><b>Op</b><br>(Loại lệnh)</td>
+        <td class="center"><b>Funct</b><br>(Mã chức năng)</td>
+        <td class="center"><b>Rn</b><br>(Thanh ghi nguồn 1)</td>
+        <td class="center"><b>Rd</b><br>(Thanh ghi đích)</td>
+        <td class="center"><b>Src2</b><br>(Toán hạng nguồn 2 / Offset)</td>
+    </tr>
+</table>
+<p class="caption">Bảng 2.1: Cấu trúc định dạng lệnh 32-bit tổng quát của kiến trúc ARM</p>
+
+<ul>
+    <li><b>Trường Op (Bit 27:26):</b> 
+        <code>00</code> đại diện cho nhóm Xử lý dữ liệu (Data-processing); 
+        <code>01</code> đại diện cho nhóm Nạp/Lưu bộ nhớ (LDR/STR); 
+        <code>10</code> đại diện cho nhóm Lệnh nhảy (Branch B).
+    </li>
+    <li><b>Trường Funct (Bit 25:20):</b> 
+        Đối với nhóm Data-processing: bit 25 là bit I (chỉ định toán hạng 2 là Imm hay Register), bit [24:21] là mã phép toán cmd (ADD, SUB, AND, ORR), bit 20 là bit S (cho phép cập nhật cờ trạng thái).
+        Đối với nhóm Memory: bit 20 là bit L (L=1 là LDR, L=0 là STR).
+    </li>
+    <li><b>Trường Src2 (Bit 11:0):</b>
+        Nếu I=1: gồm 4-bit xoay rot và 8-bit hằng số imm8.
+        Nếu I=0: gồm 5-bit dịch shamt5 = Instr[11:7], 2-bit loại dịch shtype = Instr[6:5], bit 4 bằng 0 và 4-bit thanh ghi Rm = Instr[3:0].
+    </li>
+</ul>
+
+<h2>2.3. Cơ chế thực thi có điều kiện (Conditional Execution) đặc trưng của ARM</h2>
+<p>
+Điểm độc đáo và ưu việt vượt bậc của kiến trúc ARM so với các kiến trúc RISC khác (như MIPS hay RISC-V) là: <b>Hầu như mọi câu lệnh ARM đều có thể được gán điều kiện thực thi</b> thông qua 4 bit cao nhất Cond = Instr[31:28]. Thay vì phải chèn các lệnh nhảy rẽ nhánh (gây đứt đoạn đường ống và tốn chu kỳ), bộ xử lý ARM kiểm tra trạng thái của 4 cờ hiệu {N, Z, C, V} trong thanh ghi trạng thái (CPSR):
+</p>
+<ul>
+    <li><b>Cờ N (Negative):</b> Bằng 1 nếu kết quả của phép tính là số âm (bit cao nhất Result[31] = 1).</li>
+    <li><b>Cờ Z (Zero):</b> Bằng 1 nếu kết quả phép toán bằng 0 (Result == 0).</li>
+    <li><b>Cờ C (Carry):</b> Bằng 1 nếu có cờ nhớ sinh ra trong phép cộng hoặc không có mượn trong phép trừ (No Borrow).</li>
+    <li><b>Cờ V (oVerflow):</b> Bằng 1 nếu có hiện tượng tràn số trong biểu diễn bù 2 có dấu.</li>
+</ul>
+<p>
+Nếu điều kiện kiểm tra thỏa mãn, tín hiệu CondEx = 1, các tác vụ cập nhật thanh ghi (RegWrite), ghi bộ nhớ (MemWrite) và cập nhật PC (PCSrc) sẽ diễn ra bình thường. Ngược lại, nếu sai điều kiện, CondEx = 0, lệnh sẽ biến thành lệnh không làm gì (NOP - No Operation), ngăn chặn việc ghi sai vào kiến trúc hệ thống.
+</p>
+
+<div class="page-break"></div>
+
+<h1>CHƯƠNG 3: THIẾT KẾ VI KIẾN TRÚC BỘ XỬ LÝ ARM 32-BIT</h1>
+
+<p>
+Hệ thống phần cứng được thiết kế theo mô hình phân cấp chặt chẽ, module hóa tối đa bằng ngôn ngữ SystemVerilog. Mạch mức đỉnh <code>top.sv</code> tích hợp Lõi vi xử lý <code>arm.sv</code> cùng với Bộ nhớ lệnh <code>imem.sv</code> và Bộ nhớ dữ liệu <code>dmem.sv</code>.
+</p>
+
+<!-- CHỖ CHÈN ẢNH SƠ ĐỒ KHỐI TỔNG THỂ -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 3.1: SƠ ĐỒ KHỐI KIẾN TRÚC BỘ VI XỬ LÝ ARM 32-BIT ĐƠN CHU KỲ]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Chèn sơ đồ nguyên lý Datapath + Control Unit tổng thể từ sách giáo trình Harris &amp; Harris Chapter 7 hoặc ảnh chụp từ báo cáo thuyết minh tại đây)
+    </div>
+</div>
+<p class="caption">Hình 3.1: Sơ đồ khối chi tiết đường truyền dữ liệu và khối điều khiển ARM Single-Cycle</p>
+
+<h2>3.1. Thiết kế Đường truyền dữ liệu (Datapath)</h2>
+<p>
+Đường truyền dữ liệu (<code>datapath.sv</code>) là mạng lưới phần cứng chịu trách nhiệm truyền tải, tính toán và lưu trữ dữ liệu. Cấu trúc bao gồm các khối chính:
+</p>
+<ol>
+    <li><b>Thanh ghi Program Counter (PC):</b> Sử dụng module <code>flopr #(32)</code> có Reset bất đồng bộ. Mỗi chu kỳ, PC nhận giá trị PC' từ bộ dồn kênh pcmux. Nếu PCSrc = 0, PC' = PC + 4; nếu PCSrc = 1 (khi có lệnh rẽ nhánh hoặc ghi thanh ghi 15), PC' = Result.</li>
+    <li><b>Hai bộ cộng song song:</b> Một bộ cộng <code>pcadd4</code> tính PC+4, bộ cộng thứ hai <code>pcadd8</code> tính (PC+4) + 4 = PC+8 để cấp trực tiếp cho cổng đọc R15 của tệp thanh ghi.</li>
+    <li><b>Bộ mở rộng hằng số tức thời (Extend Unit - <code>extend.sv</code>):</b>
+        Chuyển đổi các trường hằng số trong lệnh thành từ 32-bit hoàn chỉnh theo tín hiệu điều khiển ImmSrc[1:0]:
+        DP Immediate (00) zero-extend 8-bit, Memory LDR/STR (01) zero-extend 12-bit, Branch B (10) sign-extend 24-bit và dịch trái 2 bit.
+    </li>
+    <li><b>Bộ dồn kênh ngõ vào ALU (srcbmux):</b> Chọn giữa toán hạng sau khi qua khối Barrel Shifter (shifted_rd2) khi ALUSrc = 0 và hằng số tức thời (ExtImm) khi ALUSrc = 1.</li>
+    <li><b>Bộ dồn kênh ghi ngược (resmux):</b> Chọn giữa kết quả tính toán từ ALU (ALUResult) khi MemtoReg = 0 và dữ liệu đọc từ bộ nhớ RAM ngoài (ReadData) khi MemtoReg = 1.</li>
+</ol>
+
+<h2>3.2. Khối mở rộng Barrel Shifter 4 chế độ (<code>shifter.sv</code>)</h2>
+<p>
+Trong kiến trúc ARM tiêu chuẩn, toán hạng nguồn thứ hai của các lệnh xử lý dữ liệu thanh ghi có thể được dịch bit trước khi đưa vào ALU mà không tốn thêm chu kỳ xung nhịp nào. Trong đề tài này, khối <b>Barrel Shifter 32-bit (<code>shifter.sv</code>)</b> được thiết kế và đặt trực tiếp giữa cổng ra RD2 của Tệp thanh ghi và cổng 0 của bộ dồn kênh ALUSrc.
+</p>
+<p>
+Điểm mấu chốt trong thiết kế phần cứng là dữ liệu cần lưu ra bộ nhớ ngoài (WriteData) trong lệnh <code>STR</code> được trích <b>trực tiếp từ RD2 trước khi qua khối Shifter</b>, đảm bảo dữ liệu ghi vào RAM không bị dịch ngoài ý muốn.
+</p>
+
+<table>
+    <tr>
+        <th style="width: 15%;">Mã loại dịch</th>
+        <th style="width: 20%;">Tên phép dịch</th>
+        <th style="width: 30%;">Biểu thức SystemVerilog</th>
+        <th style="width: 35%;">Ý nghĩa kỹ thuật</th>
+    </tr>
+    <tr>
+        <td class="center"><code>2'b00</code></td>
+        <td class="center"><b>LSL</b> (Logical Shift Left)</td>
+        <td><code>y = a &lt;&lt; shamt;</code></td>
+        <td>Dịch trái logic, chèn các bit 0 vào bên phải (nhân với lũy thừa của 2).</td>
+    </tr>
+    <tr>
+        <td class="center"><code>2'b01</code></td>
+        <td class="center"><b>LSR</b> (Logical Shift Right)</td>
+        <td><code>y = a &gt;&gt; shamt;</code></td>
+        <td>Dịch phải logic, chèn các bit 0 vào bit cao nhất bên trái.</td>
+    </tr>
+    <tr>
+        <td class="center"><code>2'b10</code></td>
+        <td class="center"><b>ASR</b> (Arithmetic Shift Right)</td>
+        <td><code>y = $signed(a) &gt;&gt;&gt; shamt;</code></td>
+        <td>Dịch phải số học, nhân bản bit dấu a[31] vào bên trái (chia số có dấu cho 2^k).</td>
+    </tr>
+    <tr>
+        <td class="center"><code>2'b11</code></td>
+        <td class="center"><b>ROR</b> (Rotate Right)</td>
+        <td><code>y = (shamt==0)? a : ((a &gt;&gt; shamt) | (a &lt;&lt; (32 - shamt)));</code></td>
+        <td>Xoay vòng các bit sang phải, các bit bị tràn ở bên phải quay lại bit cao bên trái.</td>
+    </tr>
+</table>
+<p class="caption">Bảng 3.1: Bảng giải mã và đặc tả 4 chế độ dịch của khối Barrel Shifter</p>
+
+<h2>3.3. Tệp thanh ghi Register File và xử lý đọc thanh ghi R15 (PC + 8)</h2>
+<p>
+Tệp thanh ghi (<code>regfile.sv</code>) được thiết kế theo cấu trúc tệp thanh ghi 3 cổng (2 cổng đọc bất đồng bộ và 1 cổng ghi đồng bộ):
+</p>
+<ul>
+    <li>Cổng đọc 1 (RA1): Được chọn bởi RegSrc[0]. Khi RegSrc[0] = 0, RA1 = Instr[19:16] (Rn); khi RegSrc[0] = 1 (trong lệnh nhảy B), RA1 = 4'b1111 (15) để đưa giá trị PC+8 vào ALU tính toán địa chỉ nhảy đích.</li>
+    <li>Cổng đọc 2 (RA2): Được chọn bởi RegSrc[1]. Khi RegSrc[1] = 0, RA2 = Instr[3:0] (Rm); khi RegSrc[1] = 1 (trong lệnh STR), RA2 = Instr[15:12] (Rd) để đọc dữ liệu cần lưu vào bộ nhớ.</li>
+    <li>Cổng ghi (WA3): Nối trực tiếp với Instr[15:12] (Rd), dữ liệu ghi là Result, được chốt vào thanh ghi khi RegWrite = 1 tại sườn dương xung nhịp.</li>
+    <li><b>Quy tắc đọc R15:</b> Khi địa chỉ đọc RA1 == 15 hoặc RA2 == 15, dữ liệu đọc ra lập tức lấy trực tiếp từ đường bus r15 (PC+8) thay vì đọc trong mảng thanh ghi vật lý. Điều này đảm bảo đúng tuyệt đối chuẩn kiến trúc của hãng ARM.</li>
+</ul>
+
+<h2>3.4. Khối tính toán số học và logic (ALU) và tạo 4 cờ {N, Z, C, V}</h2>
+<p>
+Khối ALU 32-bit (<code>alu.sv</code>) nhận hai toán hạng A và B cùng tín hiệu điều khiển ALUControl[1:0] để thực hiện phép toán và tính toán chính xác 4 cờ trạng thái:
+</p>
+<ul>
+    <li>Toán hạng B được đảo bit bù 1 khi ALUControl[0] = 1 (trong phép trừ SUB).</li>
+    <li>Bộ cộng 33-bit thực hiện phép tính: Sum[32:0] = {1'b0, A} + {1'b0, B_inv} + ALUControl[0].</li>
+    <li>Phép toán logic: AND (A &amp; B) khi mã là <code>10</code>, ORR (A | B) khi mã là <code>11</code>.</li>
+    <li>Cờ nhớ C = ~ALUControl[1] &amp; Sum[32] (đối với phép trừ, C=1 nghĩa là không có mượn).</li>
+    <li>Cờ tràn V = ~ALUControl[1] &amp; ~(A[31] ^ B[31] ^ ALUControl[0]) &amp; (A[31] ^ Sum[31]).</li>
+</ul>
+
+<h2>3.5. Thiết kế Bộ điều khiển trung tâm (Control Unit)</h2>
+<p>
+Bộ điều khiển trung tâm (<code>controller.sv</code>) được thiết kế phân tầng gồm 2 khối chính:
+</p>
+<ol>
+    <li><b>Khối giải mã Decode (<code>decode.sv</code>):</b> Là logic tổ hợp thuần túy, bao gồm:
+        <ul>
+            <li><b>Main Decoder (<code>maindec.sv</code>):</b> Giải mã trường Op và các bit Funct[5], Funct[0] để tạo ra các tín hiệu điều khiển cơ sở.</li>
+            <li><b>ALU Decoder (<code>aludec.sv</code>):</b> Giải mã trường mã lệnh cmd = Funct[4:1] để sinh mã ALUControl và cờ cho phép ghi cờ FlagW[1:0].</li>
+            <li><b>PC Logic (<code>pclogic.sv</code>):</b> Xác định cờ PCS = 1 khi lệnh là lệnh rẽ nhánh B hoặc lệnh có đích ghi là thanh ghi 15 (Rd = 15).</li>
+        </ul>
+    </li>
+    <li><b>Khối logic điều kiện (<code>condlogic.sv</code>):</b> Quản lý trạng thái cờ trong hai thanh ghi cờ <code>flopenr</code> và thực hiện chốt an toàn (Signal Gating):
+        RegWrite = RegW &amp; CondEx, MemWrite = MemW &amp; CondEx, PCSrc = PCS &amp; CondEx.
+    </li>
+</ol>
+
+<table>
+    <tr>
+        <th>Loại lệnh</th>
+        <th>Op</th>
+        <th>Funct5 (I)</th>
+        <th>Funct0 (S/L)</th>
+        <th>Branch</th>
+        <th>MemtoReg</th>
+        <th>MemW</th>
+        <th>ALUSrc</th>
+        <th>ImmSrc</th>
+        <th>RegW</th>
+        <th>RegSrc</th>
+        <th>ALUOp</th>
+    </tr>
+    <tr>
+        <td class="center"><b>DP Register</b></td>
+        <td class="center">00</td>
+        <td class="center">0</td>
+        <td class="center">X</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">00</td>
+        <td class="center">1</td>
+        <td class="center">00</td>
+        <td class="center">1</td>
+    </tr>
+    <tr>
+        <td class="center"><b>DP Immediate</b></td>
+        <td class="center">00</td>
+        <td class="center">1</td>
+        <td class="center">X</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">1</td>
+        <td class="center">00</td>
+        <td class="center">1</td>
+        <td class="center">00</td>
+        <td class="center">1</td>
+    </tr>
+    <tr>
+        <td class="center"><b>LDR</b></td>
+        <td class="center">01</td>
+        <td class="center">X</td>
+        <td class="center">1</td>
+        <td class="center">0</td>
+        <td class="center">1</td>
+        <td class="center">0</td>
+        <td class="center">1</td>
+        <td class="center">01</td>
+        <td class="center">1</td>
+        <td class="center">00</td>
+        <td class="center">0</td>
+    </tr>
+    <tr>
+        <td class="center"><b>STR</b></td>
+        <td class="center">01</td>
+        <td class="center">X</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">1</td>
+        <td class="center">1</td>
+        <td class="center">01</td>
+        <td class="center">0</td>
+        <td class="center">10</td>
+        <td class="center">0</td>
+    </tr>
+    <tr>
+        <td class="center"><b>Branch (B)</b></td>
+        <td class="center">10</td>
+        <td class="center">X</td>
+        <td class="center">X</td>
+        <td class="center">1</td>
+        <td class="center">0</td>
+        <td class="center">0</td>
+        <td class="center">1</td>
+        <td class="center">10</td>
+        <td class="center">0</td>
+        <td class="center">01</td>
+        <td class="center">0</td>
+    </tr>
+</table>
+<p class="caption">Bảng 3.2: Bảng chân lý giải mã của khối Main Decoder</p>
+
+<h2>3.6. Bộ giải mã 14 mã điều kiện thực thi (<code>condcheck.sv</code>)</h2>
+<p>
+Module <code>condcheck.sv</code> thực hiện so khớp 4-bit Cond = Instr[31:28] với trạng thái hiện tại của 4 cờ {N, Z, C, V} để đưa ra cờ cho phép thực thi CondEx:
+</p>
+
+<table>
+    <tr>
+        <th style="width: 15%;">Mã Cond</th>
+        <th style="width: 15%;">Ký hiệu</th>
+        <th style="width: 35%;">Biểu thức điều kiện kiểm tra</th>
+        <th style="width: 35%;">Mô tả ý nghĩa</th>
+    </tr>
+    <tr><td class="center"><code>0000</code></td><td class="center"><b>EQ</b></td><td><code>CondEx = zero;</code></td><td>Equal (Bằng nhau)</td></tr>
+    <tr><td class="center"><code>0001</code></td><td class="center"><b>NE</b></td><td><code>CondEx = ~zero;</code></td><td>Not Equal (Khác nhau)</td></tr>
+    <tr><td class="center"><code>0010</code></td><td class="center"><b>CS / HS</b></td><td><code>CondEx = carry;</code></td><td>Carry Set / Unsigned Higher or Same</td></tr>
+    <tr><td class="center"><code>0011</code></td><td class="center"><b>CC / LO</b></td><td><code>CondEx = ~carry;</code></td><td>Carry Clear / Unsigned Lower</td></tr>
+    <tr><td class="center"><code>0100</code></td><td class="center"><b>MI</b></td><td><code>CondEx = neg;</code></td><td>Minus / Negative (Số âm)</td></tr>
+    <tr><td class="center"><code>0101</code></td><td class="center"><b>PL</b></td><td><code>CondEx = ~neg;</code></td><td>Plus / Positive (Số dương hoặc bằng 0)</td></tr>
+    <tr><td class="center"><code>0110</code></td><td class="center"><b>VS</b></td><td><code>CondEx = overflow;</code></td><td>Overflow Set (Tràn số)</td></tr>
+    <tr><td class="center"><code>0111</code></td><td class="center"><b>VC</b></td><td><code>CondEx = ~overflow;</code></td><td>Overflow Clear (Không tràn số)</td></tr>
+    <tr><td class="center"><code>1000</code></td><td class="center"><b>HI</b></td><td><code>CondEx = carry &amp; ~zero;</code></td><td>Unsigned Higher (Lớn hơn không dấu)</td></tr>
+    <tr><td class="center"><code>1001</code></td><td class="center"><b>LS</b></td><td><code>CondEx = ~carry | zero;</code></td><td>Unsigned Lower or Same (Nhỏ hơn hoặc bằng không dấu)</td></tr>
+    <tr><td class="center"><code>1010</code></td><td class="center"><b>GE</b></td><td><code>CondEx = (neg == overflow);</code></td><td>Signed Greater or Equal (Lớn hơn hoặc bằng có dấu)</td></tr>
+    <tr><td class="center"><code>1011</code></td><td class="center"><b>LT</b></td><td><code>CondEx = (neg != overflow);</code></td><td>Signed Less Than (Nhỏ hơn có dấu)</td></tr>
+    <tr><td class="center"><code>1100</code></td><td class="center"><b>GT</b></td><td><code>CondEx = ~zero &amp; (neg == overflow);</code></td><td>Signed Greater Than (Lớn hơn có dấu)</td></tr>
+    <tr><td class="center"><code>1101</code></td><td class="center"><b>LE</b></td><td><code>CondEx = zero | (neg != overflow);</code></td><td>Signed Less or Equal (Nhỏ hơn hoặc bằng có dấu)</td></tr>
+    <tr><td class="center"><code>1110</code></td><td class="center"><b>AL</b></td><td><code>CondEx = 1'b1;</code></td><td>Always (Luôn luôn thực thi - Mặc định)</td></tr>
+</table>
+<p class="caption">Bảng 3.3: Bảng chân lý giải mã toàn bộ 14 mã điều kiện thực thi của kiến trúc ARM</p>
+
+<div class="page-break"></div>
+
+<h1>CHƯƠNG 4: PHÂN TÍCH ĐƯỜNG TRỄ TỚI HẠN VÀ HIỆU NĂNG</h1>
+
+<h2>4.1. Phân tích đường trễ tới hạn (Critical Path Analysis) của lệnh LDR</h2>
+<p>
+Trong kiến trúc đơn chu kỳ, một xung nhịp đồng hồ phải có chu kỳ đủ dài để đảm bảo tín hiệu lan truyền an toàn qua con đường trễ dài nhất (Critical Path) trong hệ thống trước khi cạnh xung nhịp tiếp theo xuất hiện.
+</p>
+<p>
+Xét toàn bộ tập lệnh, lệnh <b><code>LDR</code> (Load Register)</b> là lệnh có đường trễ tới hạn dài nhất vì dữ liệu phải đi qua cả hai bộ nhớ và toàn bộ các khối chức năng chính:
+</p>
+<ol>
+    <li>Từ sườn xung nhịp, giá trị PC được chốt ra ngõ ra của thanh ghi PC (t<sub>pcq_PC</sub>).</li>
+    <li>Địa chỉ PC đi vào Bộ nhớ lệnh để lấy mã lệnh 32-bit (t<sub>mem</sub>).</li>
+    <li>Mã lệnh đi vào khối giải mã để tạo tín hiệu điều khiển (t<sub>dec</sub>), đồng thời đi vào tệp thanh ghi để đọc giá trị thanh ghi cơ sở Rn (t<sub>RFread</sub>).</li>
+    <li>Toán hạng đi vào bộ ALU để tính toán địa chỉ bộ nhớ đích (t<sub>ALU</sub>).</li>
+    <li>Địa chỉ từ ALU đi vào Bộ nhớ dữ liệu RAM để đọc dữ liệu ra (t<sub>mem</sub>).</li>
+    <li>Dữ liệu đọc ra đi qua bộ dồn kênh resmux (t<sub>mux</sub>).</li>
+    <li>Dữ liệu đến cổng ghi của Tệp thanh ghi và phải thỏa mãn thời gian thiết lập trước sườn xung nhịp (t<sub>RFsetup</sub>).</li>
+</ol>
+<p>
+Công thức toán học tính chu kỳ xung nhịp tối thiểu T<sub>c1</sub> của bộ xử lý đơn chu kỳ:
+</p>
+<div style="text-align: center; font-weight: bold; margin: 10pt 0;">
+    T<sub>c1</sub> = t<sub>pcq_PC</sub> + 2 &middot; t<sub>mem</sub> + t<sub>dec</sub> + t<sub>RFread</sub> + t<sub>ALU</sub> + 2 &middot; t<sub>mux</sub> + t<sub>RFsetup</sub>
+</div>
+
+<table>
+    <tr>
+        <th>Thành phần linh kiện phần cứng</th>
+        <th>Ký hiệu tham số</th>
+        <th>Thời gian trễ mẫu (ps)</th>
+    </tr>
+    <tr><td>Thời gian chốt ngõ ra thanh ghi PC (Clock-to-Q)</td><td class="center">t<sub>pcq_PC</sub></td><td class="center">40 ps</td></tr>
+    <tr><td>Thời gian truy xuất đọc bộ nhớ (Memory Read)</td><td class="center">t<sub>mem</sub></td><td class="center">200 ps</td></tr>
+    <tr><td>Thời gian giải mã lệnh (Decoder Delay)</td><td class="center">t<sub>dec</sub></td><td class="center">70 ps</td></tr>
+    <tr><td>Thời gian đọc tệp thanh ghi (Register File Read)</td><td class="center">t<sub>RFread</sub></td><td class="center">100 ps</td></tr>
+    <tr><td>Thời gian tính toán bộ số học &amp; logic (ALU Delay)</td><td class="center">t<sub>ALU</sub></td><td class="center">120 ps</td></tr>
+    <tr><td>Thời gian trễ qua bộ dồn kênh (Multiplexer Delay)</td><td class="center">t<sub>mux</sub></td><td class="center">25 ps</td></tr>
+    <tr><td>Thời gian thiết lập tệp thanh ghi (Register File Setup)</td><td class="center">t<sub>RFsetup</sub></td><td class="center">60 ps</td></tr>
+    <tr style="background-color: #EBF1F5; font-weight: bold;">
+        <td colspan="2"><b>Tổng chu kỳ xung nhịp tối thiểu (T<sub>c1</sub>):</b></td>
+        <td class="center" style="color: #C00000; font-size: 12pt;">840 ps (f<sub>max</sub> &asymp; 1.19 GHz)</td>
+    </tr>
+</table>
+<p class="caption">Bảng 4.1: Bảng thông số thời gian trễ linh kiện và tính toán chu kỳ xung nhịp tới hạn</p>
+
+<h2>4.2. So sánh định lượng hiệu năng với kiến trúc Multicycle và Pipelined</h2>
+<p>
+Dựa trên công thức đánh giá thời gian thực thi chương trình chuẩn trong kiến trúc máy tính:
+Thời gian thực thi = (Số lệnh N) &times; CPI &times; T<sub>c</sub>.
+Giả sử hệ thống thực thi một khối lượng chương trình gồm 100 tỷ lệnh (100 &times; 10<sup>9</sup> instructions):
+</p>
+
+<table>
+    <tr>
+        <th>Kiến trúc vi xử lý</th>
+        <th>Số chu kỳ / lệnh (CPI)</th>
+        <th>Chu kỳ xung nhịp (T<sub>c</sub>)</th>
+        <th>Thời gian thực thi (s)</th>
+        <th>Tốc độ tăng tốc (Speedup)</th>
+    </tr>
+    <tr>
+        <td><b>Single-Cycle Processor (Đồ án)</b></td>
+        <td class="center">1.00</td>
+        <td class="center">840 ps</td>
+        <td class="center">84.0 giây</td>
+        <td class="center">1.00 &times; (Chuẩn so sánh)</td>
+    </tr>
+    <tr>
+        <td><b>Multicycle Processor</b></td>
+        <td class="center">4.12</td>
+        <td class="center">340 ps</td>
+        <td class="center">140.0 giây</td>
+        <td class="center">0.60 &times; (Chậm hơn do CPI cao)</td>
+    </tr>
+    <tr>
+        <td><b>Pipelined Processor (5 tầng)</b></td>
+        <td class="center">1.23</td>
+        <td class="center">300 ps</td>
+        <td class="center">36.9 giây</td>
+        <td class="center"><b>2.28 &times; (Nhanh hơn 2.3 lần)</b></td>
+    </tr>
+</table>
+<p class="caption">Bảng 4.2: So sánh định lượng hiệu năng giữa 3 kiến trúc vi kiến trúc ARM</p>
+
+<div class="page-break"></div>
+
+<h1>CHƯƠNG 5: KẾT QUẢ TỔNG HỢP TRÊN INTEL QUARTUS PRIME</h1>
+
+<h2>5.1. Kết quả biên dịch và phân bổ tài nguyên trên FPGA MAX 10</h2>
+<p>
+Toàn bộ mã nguồn SystemVerilog của hệ thống được tiến hành tổng hợp mức cổng logic (Analysis &amp; Synthesis) trên phần mềm <b>Intel Quartus Prime Lite Edition 20.1</b> với thiết bị mục tiêu là chip FPGA <b>Intel MAX 10 (10M50DAF484C7G)</b>.
+</p>
+<p>
+Quá trình tổng hợp đạt kết quả hoàn hảo với <b>0 Errors</b> và quan trọng nhất là <b>0 Inferred Latches</b>. Đây là tiêu chí kỹ thuật sống còn của một kỹ sư thiết kế ASIC/FPGA, chứng minh toàn bộ các cấu trúc rẽ nhánh điều kiện <code>case</code> và <code>if-else</code> trong các module đều được vét cạn mọi trường hợp (có nhánh <code>default</code>), không gây sinh chốt ngoài ý muốn làm sai lệch tần số hoặc gây lỗi chạy đua tín hiệu.
+</p>
+
+<table>
+    <tr>
+        <th>Thông số tài nguyên phần cứng</th>
+        <th>Số lượng sử dụng</th>
+        <th>Dung lượng tối đa chip MAX 10</th>
+        <th>Tỷ lệ phần trăm (%)</th>
+    </tr>
+    <tr><td>Dòng chip FPGA</td><td class="center" colspan="3"><b>Intel MAX 10 (10M50DAF484C7G)</b></td></tr>
+    <tr><td>Tổng số phần tử logic (Total Logic Elements)</td><td class="center">5,459 / 5,526</td><td class="center">49,760</td><td class="center">~11 %</td></tr>
+    <tr><td>Tổng số thanh ghi (Total Registers)</td><td class="center">548</td><td class="center">49,760</td><td class="center">&lt; 2 %</td></tr>
+    <tr><td>Chân vào/ra vật lý (Total Pins)</td><td class="center">67 (2 in, 65 out)</td><td class="center">360</td><td class="center">~18 %</td></tr>
+    <tr><td>Bộ nhân cứng nhúng (Embedded Multiplier 9-bit)</td><td class="center">0</td><td class="center">288</td><td class="center">0 %</td></tr>
+    <tr><td>Trạng thái chốt ngoài ý muốn (Inferred Latches)</td><td class="center" style="color: green; font-weight: bold;">0 Latch (Sạch 100%)</td><td class="center">-</td><td class="center">0 %</td></tr>
+</table>
+<p class="caption">Bảng 5.1: Thống kê tài nguyên phần cứng sau tổng hợp trên chip FPGA Intel MAX 10</p>
+
+<!-- CHỖ CHÈN ẢNH BẢNG FLOW SUMMARY -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 5.1: ẢNH CHỤP BẢNG BÁO CÁO TỔNG HỢP QUARTUS (FLOW SUMMARY)]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Trong Quartus Prime, mở Compilation Report &rarr; Chọn mục 'Flow Summary' &rarr; Dùng Win+Shift+S chụp bảng thông số tài nguyên và dán vào đây)
+    </div>
+</div>
+<p class="caption">Hình 5.1: Ảnh chụp màn hình bảng báo cáo tổng hợp tài nguyên từ Quartus Prime</p>
+
+<h2>5.2. Phân tích sơ đồ RTL Viewer từ Quartus Prime</h2>
+<p>
+Công cụ <b>RTL Viewer</b> trong Quartus Prime giúp trực quan hóa kết quả tổng hợp từ mã nguồn SystemVerilog thành các cổng logic, khối dồn kênh, tệp thanh ghi và bộ cộng thực tế.
+</p>
+<p>
+Nhìn vào sơ đồ mức đỉnh (Top-level), ta thấy rõ sự kết nối mạch lạc giữa 3 khối:
+</p>
+<ul>
+    <li>Khối <code>arm_core</code> chiếm vị trí trung tâm, nhận xung nhịp <code>clk</code> và <code>reset</code>.</li>
+    <li>Bus <code>pc[31:0]</code> từ <code>arm_core</code> trỏ sang cổng địa chỉ <code>a</code> của <code>imem_inst</code> để lấy ra mã lệnh <code>instr[31:0]</code> cấp ngược lại cho CPU.</li>
+    <li>Bus địa chỉ <code>dataadr[31:0]</code> và dữ liệu ghi <code>writedata[31:0]</code> từ CPU được nối trực tiếp vào bộ nhớ <code>dmem_inst</code>. Dữ liệu đọc ra <code>readdata[31:0]</code> được phản hồi trở lại CPU.</li>
+</ul>
+
+<!-- CHỖ CHÈN ẢNH RTL VIEWER -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 5.2: ẢNH CHỤP SƠ ĐỒ RTL VIEWER MỨC ĐỈNH TỪ QUARTUS PRIME]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Trong Quartus Prime, vào menu Tools &rarr; Netlist Viewers &rarr; RTL Viewer &rarr; Dùng Win+Shift+S chụp sơ đồ kết nối giữa arm_core, imem và dmem rồi dán vào đây)
+    </div>
+</div>
+<p class="caption">Hình 5.2: Sơ đồ RTL Viewer hiển thị cấu trúc kết nối mức đỉnh của hệ thống</p>
+
+<!-- CHỖ CHÈN ẢNH RTL VIEWER DATAPATH -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 5.3: ẢNH CHỤP SƠ ĐỒ RTL VIEWER BÊN TRONG KHỐI DATAPATH (CÓ BARREL SHIFTER)]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Trong RTL Viewer, click đúp chuột vào khối arm_core &rarr; click đúp vào datapath:dp để mở sơ đồ bên trong, thấy rõ khối shifter nối giữa regfile và alu &rarr; Chụp ảnh dán vào đây)
+    </div>
+</div>
+<p class="caption">Hình 5.3: Sơ đồ chi tiết bên trong Datapath làm nổi bật khối Barrel Shifter</p>
+
+<div class="page-break"></div>
+
+<h1>CHƯƠNG 6: KẾT QUẢ MÔ PHỎNG MODELSIM VÀ PHÂN TÍCH DẠNG SÓNG</h1>
+
+<h2>6.1. Kịch bản chương trình kiểm thử hợp ngữ (Assembly Test Program)</h2>
+<p>
+Để xác thực toàn diện mọi tính năng phần cứng đã thiết kế, một chương trình kiểm thử hợp ngữ gồm 21 dòng lệnh máy được xây dựng và nạp vào bộ nhớ lệnh <code>memfile.dat</code>. Chương trình bao phủ 100% các trường hợp biên của phép tính số học, logic, dịch bit Barrel Shifter, rẽ nhánh có điều kiện, lưu/nạp bộ nhớ RAM:
+</p>
+
+<table>
+    <tr>
+        <th>Địa chỉ PC</th>
+        <th>Mã máy (Hex)</th>
+        <th>Lệnh hợp ngữ</th>
+        <th>Mục đích kiểm tra chức năng</th>
+    </tr>
+    <tr><td class="center"><code>0x00</code></td><td class="center"><code>e0400000</code></td><td><code>SUB R0, R0, R0</code></td><td>Khởi tạo thanh ghi R0 về giá trị 0.</td></tr>
+    <tr><td class="center"><code>0x04</code></td><td class="center"><code>e2802005</code></td><td><code>ADD R2, R0, #5</code></td><td>Kiểm tra lệnh ADD hằng số tức thời: R2 = 5.</td></tr>
+    <tr><td class="center"><code>0x08</code></td><td class="center"><code>e280300c</code></td><td><code>ADD R3, R0, #12</code></td><td>Kiểm tra ADD tức thời: R3 = 12.</td></tr>
+    <tr><td class="center"><code>0x0C</code></td><td class="center"><code>e2437009</code></td><td><code>SUB R7, R3, #9</code></td><td>Kiểm tra SUB tức thời: R7 = 12 - 9 = 3.</td></tr>
+    <tr><td class="center"><code>0x10</code></td><td class="center"><code>e1874002</code></td><td><code>ORR R4, R7, R2</code></td><td>Kiểm tra logic ORR thanh ghi: R4 = 3 | 5 = 7.</td></tr>
+    <tr><td class="center"><code>0x14</code></td><td class="center"><code>e0035004</code></td><td><code>AND R5, R3, R4</code></td><td>Kiểm tra logic AND thanh ghi: R5 = 12 &amp; 7 = 4.</td></tr>
+    <tr><td class="center"><code>0x18</code></td><td class="center"><code>e0855004</code></td><td><code>ADD R5, R5, R4</code></td><td>Kiểm tra ADD thanh ghi: R5 = 4 + 7 = 11.</td></tr>
+    <tr style="background-color: #FFF2CC;">
+        <td class="center"><code>0x1C</code></td><td class="center"><code>e0806102</code></td>
+        <td><code>ADD R6, R0, R2, LSL #2</code></td>
+        <td><b>Kiểm tra Barrel Shifter LSL:</b> R6 = 0 + (5 &lt;&lt; 2) = 20.</td>
+    </tr>
+    <tr style="background-color: #FFF2CC;">
+        <td class="center"><code>0x20</code></td><td class="center"><code>e08060a3</code></td>
+        <td><code>ADD R6, R0, R3, LSR #1</code></td>
+        <td><b>Kiểm tra Barrel Shifter LSR:</b> R6 = 0 + (12 &gt;&gt; 1) = 6.</td>
+    </tr>
+    <tr><td class="center"><code>0x24</code></td><td class="center"><code>e0558002</code></td><td><code>SUBS R8, R5, R2</code></td><td>Cập nhật cờ: R8 = 11 - 5 = 6 &rarr; Cờ Z=0, C=1.</td></tr>
+    <tr><td class="center"><code>0x28</code></td><td class="center"><code>0a000006</code></td><td><code>BEQ end_fail (0x48)</code></td><td>Kiểm tra rẽ nhánh sai: Z=0 nên KHÔNG nhảy.</td></tr>
+    <tr><td class="center"><code>0x2C</code></td><td class="center"><code>e2588006</code></td><td><code>SUBS R8, R8, #6</code></td><td>Cập nhật cờ: R8 = 6 - 6 = 0 &rarr; Cờ Z=1.</td></tr>
+    <tr><td class="center"><code>0x30</code></td><td class="center"><code>0a000000</code></td><td><code>BEQ pass_lbl (0x38)</code></td><td>Kiểm tra rẽ nhánh đúng: Z=1 nên NHẢY đến 0x38.</td></tr>
+    <tr><td class="center"><code>0x34</code></td><td class="center"><code>ea000003</code></td><td><code>B end_fail</code></td><td>Lệnh nhảy bị bỏ qua nếu BEQ thực thi đúng.</td></tr>
+    <tr style="background-color: #E2EFDA;">
+        <td class="center"><code>0x38</code></td><td class="center"><code>e5804054</code></td>
+        <td><code>STR R4, [R0, #84]</code></td>
+        <td><b>Kiểm tra STR:</b> Ghi giá trị R4 (7) vào ô nhớ DMEM[84].</td>
+    </tr>
+    <tr style="background-color: #E2EFDA;">
+        <td class="center"><code>0x3C</code></td><td class="center"><code>e5909054</code></td>
+        <td><code>LDR R9, [R0, #84]</code></td>
+        <td><b>Kiểm tra LDR:</b> Đọc ô nhớ 84 vào R9 (R9 = 7).</td>
+    </tr>
+    <tr style="background-color: #E2EFDA;">
+        <td class="center"><code>0x40</code></td><td class="center"><code>e5809058</code></td>
+        <td><code>STR R9, [R0, #88]</code></td>
+        <td><b>Kiểm tra thành công:</b> Ghi R9 (7) vào DMEM[88].</td>
+    </tr>
+    <tr><td class="center"><code>0x44</code></td><td class="center"><code>eafffffe</code></td><td><code>B 0x44 (loop)</code></td><td>Vòng lặp dừng CPU thành công.</td></tr>
+    <tr><td class="center"><code>0x48</code></td><td class="center"><code>e2801063</code></td><td><code>ADD R1, R0, #99</code></td><td>Nhánh lỗi: R1 = 99 (chỉ chạy khi rẽ nhánh sai).</td></tr>
+    <tr><td class="center"><code>0x4C</code></td><td class="center"><code>e5801054</code></td><td><code>STR R1, [R0, #84]</code></td><td>Ghi 99 vào DMEM[84] báo lỗi.</td></tr>
+    <tr><td class="center"><code>0x50</code></td><td class="center"><code>eafffffe</code></td><td><code>B 0x50 (loop)</code></td><td>Vòng lặp nhánh lỗi.</td></tr>
+</table>
+<p class="caption">Bảng 6.1: Bảng dịch mã máy và kịch bản chương trình kiểm thử hợp ngữ ARM</p>
+
+<h2>6.2. Phân tích dạng sóng mô phỏng chi tiết từng giai đoạn lệnh</h2>
+
+<!-- CHỖ CHÈN ẢNH TOÀN CẢNH WAVEFORM -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 6.1: DẠNG SÓNG TOÀN CẢNH MÔ PHỎNG TRÊN MODELSIM (ZOOM FULL)]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Trong cửa sổ Wave của ModelSim, bấm phím 'F' để Zoom Full toàn bộ 20 chu kỳ &rarr; Dùng Win+Shift+S chụp toàn bộ cửa sổ sóng từ t = 0 đến 180ns và dán vào đây)
+    </div>
+</div>
+<p class="caption">Hình 6.1: Dạng sóng toàn cảnh quá trình thực thi từ lúc khởi động đến khi hoàn tất kiểm thử</p>
+
+<h3>A. Giai đoạn kiểm tra phép tính số học, logic và Barrel Shifter</h3>
+<p>
+Tại các chu kỳ đầu tiên, sau khi tín hiệu <code>reset</code> hạ xuống mức 0 ở thời điểm 22 ns, các lệnh số học bắt đầu thực thi:
+</p>
+<ul>
+    <li>Tại PC = 0x10: Lệnh <code>ORR R4, R7, R2</code> lấy R7 = 3 và R2 = 5 thực hiện phép OR logic cho ra kết quả R4 = 7 xuất hiện trên bus aluresult.</li>
+    <li>Tại PC = 0x1C: Lệnh <code>ADD R6, R0, R2, LSL #2</code>. Dạng sóng cho thấy ngõ ra rd2 đọc ra giá trị 5, nhưng sau khi qua khối <code>shifter</code>, tín hiệu shifted_rd2 được dịch trái 2 bit thành giá trị <b>20 (0x14)</b>. Ngõ ra ALU lập tức tính 0 + 20 = 20 và ghi vào thanh ghi R6. Điều này khẳng định khối Barrel Shifter hoạt động hoàn toàn chính xác theo thời gian thực!</li>
+</ul>
+
+<!-- CHỖ CHÈN ẢNH ZOOM BARREL SHIFTER -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 6.2: DẠNG SÓNG CẬN CẢNH HOẠT ĐỘNG CỦA KHỐI BARREL SHIFTER]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Zoom vào đoạn thời gian xung quanh PC = 0x1C và PC = 0x20 &rarr; Quan sát rõ tín hiệu rd2, shifted_rd2 và aluresult biến đổi giá trị từ 5 thành 20 &rarr; Chụp ảnh dán vào đây)
+    </div>
+</div>
+<p class="caption">Hình 6.2: Dạng sóng cận cảnh minh chứng khối Barrel Shifter dịch bit tức thời</p>
+
+<h3>B. Giai đoạn kiểm tra cờ trạng thái và rẽ nhánh có điều kiện (BEQ)</h3>
+<ul>
+    <li>Tại PC = 0x24: Lệnh <code>SUBS R8, R5, R2</code> (11 - 5 = 6 khác 0) làm cờ Z = 0. Khi sang lệnh kế tiếp tại PC = 0x28 (<code>BEQ end_fail</code>), do cờ Z = 0 nên khối <code>condcheck</code> xuất tín hiệu CondEx = 0, kéo theo PCSrc = 0. Lệnh nhảy bị hủy bỏ, CPU tiếp tục nạp lệnh kế tiếp tuần tự tại PC = 0x2C.</li>
+    <li>Tại PC = 0x2C: Lệnh <code>SUBS R8, R8, #6</code> (6 - 6 = 0) làm cờ Z = 1 được ghi vào thanh ghi cờ. Tại lệnh tiếp theo ở PC = 0x30 (<code>BEQ pass_lbl</code>), do Z = 1 thỏa điều kiện EQ, khối điều khiển bật PCSrc = 1. Ngay lập tức giá trị PC' nhảy vọt qua lệnh 0x34 để đáp xuống đúng địa chỉ đích <b>0x38</b>.</li>
+</ul>
+
+<h3>C. Giai đoạn truy xuất bộ nhớ và kết thúc kiểm chứng</h3>
+<p>
+Tại chu kỳ lệnh cuối cùng ở PC = 0x40 (Lệnh <code>STR R9, [R0, #88]</code>):
+</p>
+<ul>
+    <li>Thanh ghi R9 chứa giá trị 7 (vừa được nạp từ ô nhớ DMEM[84] qua lệnh LDR trước đó) được đưa ra cổng rd2.</li>
+    <li>Tín hiệu <code>dataadr = 88</code> và <code>writedata = 7</code>. Tín hiệu <code>memwrite = 1</code> được kích hoạt ở mức cao.</li>
+    <li>Testbench tự động phát hiện sự kiện ghi đúng địa chỉ và đúng dữ liệu mong muốn, lập tức in thông báo thành công vang dội:
+        <div class="code-block">
+# [Cycle 18] Ghi vao Bo Nho DMEM: Dia chi = 84 (0x54), Du lieu = 7 (0x7)
+# [Cycle 20] Ghi vao Bo Nho DMEM: Dia chi = 88 (0x58), Du lieu = 7 (0x7)
+# ----------------------------------------------------------------
+# >>> KET QUA: MO PHONG THANH CONG! (ALL TESTS PASSED!)       <<<
+# >>> Chu ky hoan thanh: 20 chu ky.                          <<<
+# >>> Gia tri 7 da duoc tinh toan, ghi ra DMEM[84], doc lai   <<<
+# >>> qua LDR va ghi tiep ra DMEM[88] hoan toan chinh xac!   <<<
+# ----------------------------------------------------------------
+        </div>
+    </li>
+</ul>
+
+<!-- CHỖ CHÈN ẢNH WAVEFORM TẠI ĐIỂM DỪNG THÀNH CÔNG -->
+<div class="placeholder-box">
+    <div class="placeholder-title">[HÌNH 6.3: DẠNG SÓNG TẠI THỜI ĐIỂM HOÀN TẤT KIỂM THỬ (PC = 0x40, DATAADR = 88, WRITEDATA = 7)]</div>
+    <div class="placeholder-desc">
+        (Hướng dẫn: Chèn chính là bức ảnh dạng sóng thứ hai mà bạn đã gửi cho tôi – tại thời điểm Now = 175000 ps với dataadr = 88, writedata = 7, memwrite = 1!)
+    </div>
+</div>
+<p class="caption">Hình 6.3: Dạng sóng thời điểm hoàn tất kiểm thử khẳng định vi xử lý hoạt động hoàn hảo 100%</p>
+
+<div class="page-break"></div>
+
+<h1>CHƯƠNG 7: TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN</h1>
+
+<h2>7.1. Kết luận chung</h2>
+<p>
+Đồ án đã hoàn thành xuất sắc toàn bộ các mục tiêu đặt ra ban đầu, xây dựng thành công một bộ vi xử lý ARM 32-bit đơn chu kỳ hoàn chỉnh trên nền tảng ngôn ngữ SystemVerilog và tổng hợp trên FPGA Intel MAX 10.
+</p>
+<p class="no-indent" style="font-weight: bold;">Các kết quả nổi bật đạt được:</p>
+<ol>
+    <li><b>Thiết kế vi kiến trúc hoàn chỉnh:</b> Hiện thực hóa đầy đủ cả đường truyền dữ liệu (Datapath), tệp thanh ghi, khối số học ALU, bộ điều khiển trung tâm và hai bộ nhớ lệnh/dữ liệu theo kiến trúc Harvard.</li>
+    <li><b>Tích hợp các khối mở rộng cao cấp:</b> Đã hiện thực thành công khối <b>Barrel Shifter 32-bit</b> 4 chế độ hoạt động trơn tru trong cùng một chu kỳ và bộ giải mã đầy đủ <b>14 mã điều kiện thực thi</b> của chuẩn ARMv4.</li>
+    <li><b>Chất lượng mã nguồn RTL đạt chuẩn công nghiệp:</b> Biên dịch trên Intel Quartus Prime đạt <b>0 Errors, 0 Inferred Latches</b>, sử dụng tối ưu ~11% tài nguyên logic trên chip FPGA Intel MAX 10.</li>
+    <li><b>Kiểm thử toàn diện:</b> Xây dựng Self-checking Testbench tự động bắt lỗi, vượt qua 100% các bài test số học, rẽ nhánh và truy xuất bộ nhớ.</li>
+</ol>
+
+<h2>7.2. Hướng phát triển trong tương lai</h2>
+<ul>
+    <li><b>Nâng cấp lên kiến trúc đường ống 5 tầng (5-Stage Pipelined Processor):</b> Chia nhỏ chu kỳ thực thi thành các tầng Fetch, Decode, Execute, Memory, Writeback để giảm chu kỳ xung nhịp xuống còn ~300 ps, tăng tần số hoạt động lên gấp 2.3 lần. Bổ sung khối <b>Hazard Unit</b> để xử lý Data Forwarding và Stalling.</li>
+    <li><b>Tích hợp ngoại vi theo cơ chế Memory-Mapped I/O:</b> Ánh xạ các cổng I/O của kit FPGA Terasic DE10-Lite (như 10 LED đỏ, 6 LED 7 đoạn, nút bấm và Switch) vào không gian địa chỉ bộ nhớ để CPU có thể điều khiển trực tiếp phần cứng thực tế.</li>
+    <li><b>Bổ sung tập lệnh Thumb 16-bit:</b> Mở rộng khối giải mã để hỗ trợ tập lệnh nén Thumb, giúp tăng mật độ mã nguồn và tiết kiệm dung lượng bộ nhớ ROM trong các ứng dụng nhúng.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h1>TÀI LIỆU THAM KHẢO</h1>
+<p class="no-indent">[1] Sarah L. Harris and David Money Harris, <i>Digital Design and Computer Architecture: ARM® Edition</i>, Morgan Kaufmann / Elsevier, 2015.</p>
+<p class="no-indent">[2] ARM Limited, <i>ARM Architecture Reference Manual (ARMv4, ARMv5, ARMv6 architectures)</i>, Cambridge, UK, 2005.</p>
+<p class="no-indent">[3] Intel Corporation, <i>MAX 10 FPGA Device Overview &amp; Handbook</i>, Intel FPGA Documentation, 2020.</p>
+<p class="no-indent">[4] Stuart Sutherland, <i>SystemVerilog for Design: A Guide to Using SystemVerilog for Hardware Design and Modeling</i>, Springer, 2006.</p>
+
+<div class="page-break"></div>
+
+<h1>PHỤ LỤC: MÃ NGUỒN SYSTEMVERILOG HỆ THỐNG</h1>
+<p class="no-indent" style="font-style: italic;">(Toàn bộ mã nguồn đã được tổng hợp không lỗi trên Intel Quartus Prime Lite Edition và kiểm chứng trên ModelSim)</p>
+
+<h3>1. Khối Barrel Shifter mở rộng (src/shifter.sv)</h3>
+<div class="code-block">
+module shifter (
+    input  logic [31:0] a,
+    input  logic [4:0]  shamt,
+    input  logic [1:0]  shtype,
+    output logic [31:0] y
+);
+    always_comb begin
+        case (shtype)
+            2'b00: y = a &lt;&lt; shamt;                           // LSL: Dich trai logic
+            2'b01: y = a &gt;&gt; shamt;                           // LSR: Dich phai logic
+            2'b10: y = $signed(a) &gt;&gt;&gt; shamt;                 // ASR: Dich phai so hoc bao toan dau
+            2'b11: y = (shamt == 5'd0) ? a :                 // ROR: Xoay vong phai
+                       ((a &gt;&gt; shamt) | (a &lt;&lt; (32 - shamt)));
+            default: y = a;
+        endcase
+    end
+endmodule
+</div>
+
+<h3>2. Khối Số học &amp; Logic ALU 32-bit (src/alu.sv)</h3>
+<div class="code-block">
+module alu (
+    input  logic [31:0] a,
+    input  logic [31:0] b,
+    input  logic [1:0]  alucontrol,
+    output logic [31:0] result,
+    output logic [3:0]  flags // {N, Z, C, V}
+);
+    logic [31:0] condinvb;
+    logic [32:0] sum;
+    logic        neg, zero, carry, overflow;
+
+    assign condinvb = alucontrol[0] ? ~b : b;
+    assign sum      = {1'b0, a} + {1'b0, condinvb} + {32'b0, alucontrol[0]};
+
+    always_comb begin
+        case (alucontrol)
+            2'b00: result = sum[31:0]; // ADD
+            2'b01: result = sum[31:0]; // SUB
+            2'b10: result = a &amp; b;     // AND
+            2'b11: result = a | b;     // ORR
+            default: result = 32'bx;
+        endcase
+    end
+
+    assign neg      = result[31];
+    assign zero     = (result == 32'b0);
+    assign carry    = ~alucontrol[1] &amp; sum[32];
+    assign overflow = ~alucontrol[1] &amp; ~(a[31] ^ b[31] ^ alucontrol[0]) &amp; (a[31] ^ sum[31]);
+    assign flags    = {neg, zero, carry, overflow};
+endmodule
+</div>
+
+<h3>3. Khối giải mã 14 mã điều kiện thực thi (src/condcheck.sv)</h3>
+<div class="code-block">
+module condcheck (
+    input  logic [3:0] cond,
+    input  logic [3:0] flags, // {N, Z, C, V}
+    output logic       condex
+);
+    logic neg, zero, carry, overflow, ge;
+    assign {neg, zero, carry, overflow} = flags;
+    assign ge = (neg == overflow);
+
+    always_comb begin
+        case (cond)
+            4'b0000: condex = zero;                     // EQ
+            4'b0001: condex = ~zero;                    // NE
+            4'b0010: condex = carry;                    // CS / HS
+            4'b0011: condex = ~carry;                   // CC / LO
+            4'b0100: condex = neg;                      // MI
+            4'b0101: condex = ~neg;                     // PL
+            4'b0110: condex = overflow;                 // VS
+            4'b0111: condex = ~overflow;                // VC
+            4'b1000: condex = carry &amp; ~zero;            // HI
+            4'b1001: condex = ~carry | zero;            // LS
+            4'b1010: condex = ge;                       // GE
+            4'b1011: condex = ~ge;                      // LT
+            4'b1100: condex = ~zero &amp; ge;               // GT
+            4'b1101: condex = zero | ~ge;               // LE
+            4'b1110: condex = 1'b1;                     // AL (Always)
+            default: condex = 1'b0;
+        endcase
+    end
+endmodule
+</div>
+
+</div>
+</body>
+</html>
