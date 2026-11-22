@@ -1,6 +1,7 @@
 # ==============================================================================
 # ModelSim DO script for ARM 32-bit Single-Cycle Processor Simulation
 # ==============================================================================
+catch {quit -sim}
 cd D:/arm_single_cycle/sim
 vlib work
 vmap work work
