@@ -136,17 +136,19 @@ Compiled with **Intel Quartus Prime 20.1** targeting **Intel MAX 10 FPGA (`10M50
 
 | Metric | Result |
 | :--- | :--- |
-| **Target Device** | Intel MAX 10 - `10M50DAF484C7G` |
-| **Logic Elements (LEs)** | **5,459 / 49,760 (11%)** |
-| **Combinational Functions** | 4,947 |
-| **Dedicated Logic Registers** | 548 |
-| **Total Pins** | 68 / 360 (19%) |
-| **Unintended Latches** | **0** |
-| **Timing / Critical Path** | $T_c \approx 31.8\text{ ns} \implies f_{max} \approx 31.4\text{ MHz}$ |
+| **Target Device** | Intel MAX 10 - `10M50DAF484C7G` (DE10-Lite) |
+| **Logic Elements (LEs)** | **5,395 / 49,760 (11%)** |
+| **Dedicated Logic Registers** | **2,561 / 49,760 (5%)** |
+| **Total Pins** | **67 / 360 (19%)** |
+| **Unintended Latches** | **0 (Clean Netlist)** |
+| **Timing / Critical Path** | $T_c \approx 31.8\text{ ns} \implies f_{max} \approx 31.45\text{ MHz}$ |
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Project Information
 
-- GitHub: [@DkaRobotEngineer](https://github.com/DkaRobotEngineer)
-- Project: Course Final Project - Digital Design & Microprocessors (ELT3290), VNU-UET.
+- **Student:** Nguyễn Tiến Đạt (Student ID: 24022854)
+- **Instructors:** PGS.TS. Phạm Ngọc Quang, KS. Đỗ Đình Minh
+- **Course:** Digital Design & Microprocessors (ELT3290)
+- **Institution:** VNU University of Engineering and Technology (VNU-UET)
+- **GitHub:** [@DkaRobotEngineer](https://github.com/DkaRobotEngineer)

@@ -215,11 +215,11 @@ pre {
     <table class="cover-info-table">
         <tr>
             <td style="width: 45%; font-weight: bold;">Sinh viên thực hiện:</td>
-            <td style="width: 55%;"><b>[HỌ VÀ TÊN SINH VIÊN]</b></td>
+            <td style="width: 55%;"><b>Nguyễn Tiến Đạt – 24022854</b></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">Mã số sinh viên:</td>
-            <td><b>[MÃ SỐ SINH VIÊN]</b></td>
+            <td><b>24022854</b></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">Lớp môn học:</td>
@@ -227,7 +227,7 @@ pre {
         </tr>
         <tr>
             <td style="font-weight: bold;">Giảng viên phụ trách:</td>
-            <td><b>TS. Vũ Quốc Tuấn</b><br><b>KS. Phạm Quang Hùng</b></td>
+            <td><b>PGS.TS. Phạm Ngọc Quang</b><br><b>KS. Đỗ Đình Minh</b></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">Mã nguồn GitHub:</td>
@@ -298,9 +298,9 @@ pre {
 
 <h1>1 Tổng quan đề tài:</h1>
 
-<h2>1.1 Lí do lựa chọn đề tài:</h2>
-<p>Trong kỷ nguyên công nghệ hiện nay, kiến trúc ARM (Advanced RISC Machine) đã trở thành một trong những kiến trúc vi xử lý phổ biến nhất thế giới, xuất hiện trong hầu hết các thiết bị từ điện thoại di động, máy tính bảng đến các hệ thống nhúng (IoT) và các máy chủ hiệu năng cao. Với ưu điểm là kiến trúc tập lệnh rút gọn (RISC), ARM mang lại hiệu năng tính toán cao nhưng vẫn đảm bảo tối ưu hóa năng lượng tiêu thụ vượt trội.</p>
-<p>Việc nghiên cứu và tự tay xây dựng mô hình một bộ vi xử lý ARM từ mức cổng logic (RTL - Register Transfer Level) không chỉ giúp sinh viên ngành Kỹ thuật Máy tính và Điện tử - Viễn thông hiểu thấu đáo về nguyên lý vận hành của phần cứng máy tính, mà còn là nền tảng cốt lõi trong quy trình thiết kế vi mạch tích hợp (ASIC) và hệ thống trên chip (SoC). Trong kiến trúc này, việc phối hợp đồng bộ giữa Khối điều khiển (Control Unit) đóng vai trò là "bộ não" chỉ huy và Đường truyền dữ liệu (Datapath) đóng vai trò là "cơ bắp" thực thi chính là bài toán thực hành cơ bản và kinh điển nhất của môn học Thiết kế số và Vi xử lý.</p>
+<h2>1.1 Đặt vấn đề và ý nghĩa đề tài:</h2>
+<p>Trong thiết kế hệ thống số và kiến trúc máy tính, việc xây dựng một bộ vi xử lý hoàn chỉnh là bước thực hành cốt lõi giúp kết nối lý thuyết mạch tổ hợp, mạch tuần tự với nguyên lý vận hành thực tế của CPU. Trong đó, kiến trúc ARM (Advanced RISC Machine) với tập lệnh rút gọn (RISC), cấu trúc thanh ghi đều và cơ chế thực thi có điều kiện đặc trưng là một trong những kiến trúc tiêu biểu nhất, hiện diện rộng rãi từ hệ thống nhúng đến các nền tảng tính toán hiện đại.</p>
+<p>Xuất phát từ yêu cầu bài tập lớn môn Thiết kế số và Vi xử lý (ELT3290), đề tài tập trung thiết kế và hiện thực bộ vi xử lý Single-Cycle ARM 32-bit ở mức chuyển giao thanh ghi (RTL – Register Transfer Level) trên ngôn ngữ SystemVerilog. Dù kiến trúc đơn chu kỳ (mỗi lệnh hoàn tất trong đúng một chu kỳ xung nhịp) bị giới hạn tốc độ bởi đường trễ tới hạn, đây lại là mô hình trực quan và nền tảng nhất để nắm vững sự phối hợp giữa Khối điều khiển (Control Unit), Đường truyền dữ liệu (Datapath) và hệ thống bộ nhớ kiến trúc Harvard — làm tiền đề để mở rộng lên các kiến trúc hiệu năng cao hơn như Pipeline. Bên cạnh các khối cơ bản theo yêu cầu môn học, nhóm mở rộng tích hợp thêm khối Barrel Shifter 32-bit cùng đầy đủ 14 mã điều kiện thực thi và kiểm chứng tổng hợp trên dòng FPGA Intel MAX 10 nhằm đưa thiết kế tiệm cận hơn với chuẩn vi xử lý ARM thực tế.</p>
 
 <h2>1.2 Mục tiêu của đề tài:</h2>
 <p>Mục tiêu trọng tâm của đồ án là thiết kế, hiện thực hóa và kiểm chứng thành công một bộ vi xử lý ARM 32-bit hoàn chỉnh theo kiến trúc đơn chu kỳ (Single-Cycle Microarchitecture) bằng ngôn ngữ mô tả phần cứng SystemVerilog (IEEE 1800-2017). Khác với các thiết kế rút gọn thông thường chỉ mô phỏng khối điều khiển rời rạc, dự án này hướng đến việc hiện thực trọn vẹn cả đường dữ liệu, bộ nhớ và các khối mở rộng phần cứng cao cấp.</p>
@@ -615,7 +615,7 @@ pre {
     </tr>
     <tr>
         <td><b>Total Logic Elements (LEs)</b></td>
-        <td class="center"><b>5,459</b></td>
+        <td class="center"><b>5,395</b></td>
         <td class="center">49,760</td>
         <td class="center"><b>11 %</b></td>
     </tr>
@@ -627,19 +627,19 @@ pre {
     </tr>
     <tr>
         <td>-- Dedicated Logic Registers</td>
-        <td class="center">548</td>
+        <td class="center">2,561</td>
         <td class="center">49,760</td>
-        <td class="center">1 %</td>
+        <td class="center">5 %</td>
     </tr>
     <tr>
         <td><b>Total Registers</b></td>
-        <td class="center"><b>548</b></td>
+        <td class="center"><b>2,561</b></td>
         <td class="center">-</td>
         <td class="center">-</td>
     </tr>
     <tr>
         <td><b>Total Pins</b></td>
-        <td class="center">68</td>
+        <td class="center">67</td>
         <td class="center">360</td>
         <td class="center">19 %</td>
     </tr>
@@ -830,7 +830,7 @@ pre {
 <h1>TÀI LIỆU THAM KHẢO</h1>
 <p class="noindent">[1] Sarah L. Harris and David Money Harris, <i>Digital Design and Computer Architecture: ARM® Edition</i>, Morgan Kaufmann / Elsevier, 2015.</p>
 <p class="noindent">[2] ARM Limited, <i>ARM Architecture Reference Manual (ARMv4, ARMv5, ARMv6 architectures)</i>, Cambridge, UK, 2005.</p>
-<p class="noindent">[3] TS. Vũ Quốc Tuấn, KS. Phạm Quang Hùng, <i>Bài giảng môn học Thiết kế số và Vi xử lý (ELT3290)</i>, Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội, 2024.</p>
+<p class="noindent">[3] PGS.TS. Phạm Ngọc Quang, KS. Đỗ Đình Minh, <i>Bài giảng môn học Thiết kế số và Vi xử lý (ELT3290)</i>, Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội, 2024.</p>
 <p class="noindent">[4] Intel Corporation, <i>MAX 10 FPGA Device Overview & Handbook</i>, Intel FPGA Documentation, 2020.</p>
 <p class="noindent">[5] IEEE Standard Association, <i>IEEE Standard for SystemVerilog—Unified Hardware Design, Specification, and Verification Language</i>, IEEE Std 1800-2017, 2017.</p>
 

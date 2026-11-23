@@ -1,15 +1,21 @@
 # BÁO CÁO KỸ THUẬT: THIẾT KẾ BỘ XỬ LÝ ARM 32-BIT ĐƠN CHU KỲ (SINGLE-CYCLE PROCESSOR)
-**Học phần:** Thiết kế số & Vi xử lý  
+**Học phần:** Thiết kế số & Vi xử lý (ELT3290)  
+**Sinh viên thực hiện:** Nguyễn Tiến Đạt – 24022854  
+**Giảng viên phụ trách:** PGS.TS. Phạm Ngọc Quang, KS. Đỗ Đình Minh  
+**Trường:** Đại học Công nghệ – Đại học Quốc gia Hà Nội (VNU-UET)  
 **Nền tảng thực thi:** Intel Quartus Prime Lite & ModelSim  
 **Thiết bị mục tiêu:** FPGA Intel MAX 10 (10M50DAF484C7G - Terasic DE10-Lite)  
-**Ngôn ngữ mô tả phần cứng:** SystemVerilog (IEEE 1800-2017)
+**Ngôn ngữ mô tả phần cứng:** SystemVerilog (IEEE 1800-2017)  
+**Mã nguồn GitHub:** [github.com/DkaRobotEngineer/arm-32bit-single-cycle-processor-](https://github.com/DkaRobotEngineer/arm-32bit-single-cycle-processor-)
 
 ---
 
 ## 1. GIỚI THIỆU & MỤC TIÊU ĐỀ TÀI
 
-### 1.1. Đặt vấn đề
-Kiến trúc ARM (Advanced RISC Machines) là kiến trúc tập lệnh RISC (Reduced Instruction Set Computer) phổ biến nhất thế giới hiện nay, chiếm lĩnh từ các vi điều khiển nhúng (Cortex-M) đến các bộ xử lý di động và máy chủ hiệu năng cao. Để hiểu sâu sắc cách phần mềm hợp ngữ tương tác trực tiếp với mạch phần cứng số, việc thiết kế một bộ xử lý ARM 32-bit từ mức cổng logic (RTL - Register Transfer Level) là bài thực hành nền tảng quan trọng nhất trong kỹ thuật máy tính và thiết kế vi mạch.
+### 1.1. Đặt vấn đề và ý nghĩa đề tài
+Trong thiết kế hệ thống số và kiến trúc máy tính, việc xây dựng một bộ vi xử lý hoàn chỉnh là bước thực hành cốt lõi giúp kết nối lý thuyết mạch tổ hợp, mạch tuần tự với nguyên lý vận hành thực tế của CPU. Trong đó, kiến trúc ARM (Advanced RISC Machine) với tập lệnh rút gọn (RISC), cấu trúc thanh ghi đều và cơ chế thực thi có điều kiện đặc trưng là một trong những kiến trúc tiêu biểu nhất, hiện diện rộng rãi từ hệ thống nhúng đến các nền tảng tính toán hiện đại.
+
+Xuất phát từ yêu cầu bài tập lớn môn Thiết kế số và Vi xử lý (ELT3290), đề tài tập trung thiết kế và hiện thực bộ vi xử lý Single-Cycle ARM 32-bit ở mức chuyển giao thanh ghi (RTL – Register Transfer Level) trên ngôn ngữ SystemVerilog. Dù kiến trúc đơn chu kỳ (mỗi lệnh hoàn tất trong đúng một chu kỳ xung nhịp) bị giới hạn tốc độ bởi đường trễ tới hạn, đây lại là mô hình trực quan và nền tảng nhất để nắm vững sự phối hợp giữa Khối điều khiển (Control Unit), Đường truyền dữ liệu (Datapath) và hệ thống bộ nhớ kiến trúc Harvard — làm tiền đề để mở rộng lên các kiến trúc hiệu năng cao hơn như Pipeline. Bên cạnh các khối cơ bản theo yêu cầu môn học, nhóm mở rộng tích hợp thêm khối Barrel Shifter 32-bit cùng đầy đủ 14 mã điều kiện thực thi và kiểm chứng tổng hợp trên dòng FPGA Intel MAX 10 nhằm đưa thiết kế tiệm cận hơn với chuẩn vi xử lý ARM thực tế.
 
 ### 1.2. Mục tiêu đề tài
 1. Hiện thực hóa vi kiến trúc vi xử lý **ARM 32-bit đơn chu kỳ (Single-Cycle Microarchitecture)** trên ngôn ngữ SystemVerilog, tuân thủ chặt chẽ giáo trình chuẩn quốc tế *Digital Design and Computer Architecture: ARM® Edition* (Sarah L. Harris & David Money Harris).
